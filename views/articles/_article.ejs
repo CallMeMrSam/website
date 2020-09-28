@@ -1,0 +1,16 @@
+            <div class="card mt-4">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4"><%= article.title %></p>
+                            <time datetime="2016-1-1"><%= article.createdAt.toLocaleDateString() %></time>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <%= article.description %>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                  <a href="/" class="card-footer-item">Voir</a>
+                </footer>
+            </div>

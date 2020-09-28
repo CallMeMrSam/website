@@ -18,9 +18,22 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 fs.readdirSync('./routes').forEach((file) => {
-  if(file.split(".").pop() === 'js') {
-    let props = require('./routes/' + file);
-    app.use(props.name, props.router)
+  let propsName = file.split(".")[0];
+
+  if(file.split(".").pop() === propsName) {
+    
+    fs.readdirSync(`./routes/${propsName}`).forEach((file2) => {
+      if(file2.split(".").pop() === 'js') {
+        let props = require(`./routes/${propsName}/` + file2);
+        app.use(props.name, props.router)
+      }
+    })
+
+  } else {
+    if(file.split(".").pop() === 'js') {
+      let props = require('./routes/' + file);
+      app.use(props.name, props.router)
+    }
   }
 })
 

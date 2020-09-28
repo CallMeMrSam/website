@@ -1,0 +1,16 @@
+<%- include('../helpers/header.ejs'); %>
+  <section class="hero is-fullheight-with-navbar">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Articles
+        </h1>
+        <div class="container">
+            <% articles.forEach(article => { %>
+                <%- include('_article.ejs', {article: article}) %>
+            <% }) %>
+        </div>
+      </div>
+    </div>
+  </section>
+<%- include('../helpers/footer.ejs'); %>
