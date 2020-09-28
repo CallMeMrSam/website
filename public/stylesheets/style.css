@@ -1,8 +1,5 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
+.navbar {
+  -webkit-box-shadow: 0px -70px 15px 80px rgba(139, 75, 75, 0.1);
+  -moz-box-shadow: 0px -70px 15px 80px rgba(0,0,0,0.1);
+  box-shadow: 0px -70px 15px 80px rgba(0,0,0,0.1);
 }
